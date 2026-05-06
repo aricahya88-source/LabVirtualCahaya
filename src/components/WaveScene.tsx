@@ -106,7 +106,8 @@ export const WaveScene = forwardRef<WaveSceneHandle, WaveSceneProps>(function Wa
       }
 
       if (!xrRef.current) {
-        xrRef.current = await scene.createDefaultXRExperienceAsync({
+        
+        xrRef.current = await WebXRDefaultExperience.CreateAsync(scene, {
           disableDefaultUI: true,
           disableTeleportation: true,
           disableNearInteraction: true,
